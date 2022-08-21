@@ -14,7 +14,7 @@ body{
 
 /* En-tête */
 
-h1{
+.heading--font{
     font-family: 'Shrikhand', sans-serif;
     text-align: center;
     height: 30px;
@@ -22,70 +22,102 @@ h1{
 
 /* Barre de recherche */
 
-#search{
-    background-color: lightgrey;
+.heading--search{
+    background-color: gainsboro;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0px 3px 3px #C0C0C0;
 }
 
-#search input{
-    background-color: lightgrey;
+.heading--search input{
+    width: 120px;
+    background-color: gainsboro;
     border: none;
     padding: 5px;
 }
 
+.heading--search i{
+    padding-right: 10px;
+}
+
+
 /* Section Réserver & explorer */
 
-#book{
+#heading__explore{
     background-color: #F2F2F2;
+    height: 270px;
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 10px;
 }
 
-#book input{
+#heading__explore h2{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#heading__explore p{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#heading__explore button{
     font-weight: bold;
     color: white;
-    background-color: #FF79DA;
+    background: linear-gradient($secondary-color, $primary-color);
     border: 0;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 3px 3px 3px gainsboro;
-    height: 30px;
-    padding-right: 20px;
+    height: 50px;
     padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
 }
+
+
 
 /* Section Fonctionnement */
 
-.section1_element{
+#section1{
+    height: 280px;
+}
+
+.section1__element{
     font-weight: bold;
     background-color: #F2F2F2;
     border-radius: 10px;
     box-shadow: 3px 3px 3px gainsboro;
-    width: 90%;
+    width: 80%;
     height: 60px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     margin-bottom: 10px;
 }
 
-.section1_number{
-    background-color:#9356DC;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    position: relative;
+.section1__element i{
+    padding-right: 30px;
+    padding-left: 15px;
 }
 
-.section1_number div{
+.section1__number--background{
+    background-color:#9356DC;
+    width: 23px;
+    height: 23px;
+    border-radius: 20px;
+    position: relative;
+    right: 10px;
+}
+
+.section1__number--font{
     font-weight: lighter;
     color: white;
     text-align: center;
+    padding-top: 2px;
 }
 
 
@@ -93,36 +125,56 @@ h1{
 
 #section2{
     background-color: #F2F2F2;
+    padding-bottom: 30px;
 }
 
-.section2_element{
+.section2__element{
     background-color: white;
     width: 90%;
-    height: 300px;
-    margin-right: 15px;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 15px;
     border-radius: 15px;
     padding: 5px;
     box-shadow: 5px 5px 5px gainsboro;
+    line-height: 5px;
 }
 
-.section2_element img{
+.section2__element img{
     width: 100%;
     height: 150px;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
 
-.section2_new{
+.section2__element__label{
     color: green;
     font-weight: bold;
     background-color: $tertiary-color;
     width: 80px;
     text-align: center;
     position: relative;
-    left: 340px;
+    left: 310px;
     bottom: 130px;
+    line-height: normal;
 }
+
+.section2__element i{
+    position: relative;
+    left: 370px;
+    bottom: 40px;
+}
+
+.section2__element a:link{
+    color: black;
+    text-decoration: none;   
+}
+
+.section2__element a:visited{
+    color: black;
+}
+
 
 /* Footer */
 
@@ -153,6 +205,59 @@ footer a:link{
 footer a:hover{
     font-weight: bold;
 }
+
+/* Page MENU */
+
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_menu h1{
+    padding-right: 120px;
+}
+
+.body_menu{
+    background-color: #F2F2F2;
+}
+
+.menu_head{
+    background-color: gainsboro;
+    height: 70px;
+    position: relative;
+    bottom: 70px;
+    border-radius: 10px 10px 0 0;
+}
+
+.menu_head_element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu img{
+    width: 100%;
+}
+
+.entrées{
+    border: 2px solid black;
+}
+
+.element{
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.element_align{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive design : taille d'écran mobile */
 
 @media screen and (min-width: 768px) {
     
