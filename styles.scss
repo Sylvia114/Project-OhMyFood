@@ -208,53 +208,75 @@ footer a:hover{
 
 /* Page MENU */
 
-.header_menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* Page MENU En-tête */
 
-.header_menu h1{
-    padding-right: 120px;
-}
-
-.body_menu{
+.menu{
     background-color: #F2F2F2;
 }
 
-.menu_head{
-    background-color: gainsboro;
-    height: 70px;
+#header__icon{
     position: relative;
-    bottom: 70px;
-    border-radius: 10px 10px 0 0;
+    top: 60px;
 }
 
-.menu_head_element{
+.menu__head{
+    background-color: #F2F2F2;
+    height: 70px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    bottom: 70px;
+
+}
+
+.menu__head__element{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
+
 .menu img{
     width: 100%;
 }
 
-.entrées{
-    border: 2px solid black;
+/* Page MENU Entrées/plats/desserts */
+
+.plats{
+    position: relative;
+    bottom: 70px;
 }
 
-.element{
-    border: 2px solid black;
+.plats_title{
+    font-weight: lighter;
+    border-bottom: 3px solid $tertiary-color;
+    width: 45px;
+    padding-left: 10px;
+}
+
+.plats__element{
+    width: 90%;
+    line-height: 1px;
     background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 5px 5px 5px gainsboro;
 }
 
-.element_align{
+.plats__element--align{
     display: flex;
     justify-content: space-between;
+}
+
+.price{
+    font-weight: bold;
 }
 
 /* Responsive design : taille d'écran mobile */
