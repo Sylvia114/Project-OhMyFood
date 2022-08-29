@@ -144,34 +144,31 @@ body {
   line-height: normal;
 }
 
-.section2__element i {
+h3 a:visited {
+  color: black;
+}
+
+.section2__element h3, p {
+  padding-left: 10px;
+}
+
+.heart {
   position: relative;
-  left: 370px;
-  bottom: 40px;
+  left: 380px;
+  bottom: 35px;
 }
 
-.section2__element .fa-solid {
-  color: #9356DC;
+.heart-full {
   display: none;
 }
 
-.section2__element .fa-regular:hover {
-  display: none;
-  content: "\f004";
+.heart:hover .heart-full {
+  display: contents;
   color: #9356DC;
 }
 
-.icon_heart :hover {
+.heart:hover .heart-empty {
   display: none;
-}
-
-.section2__element a:link {
-  color: black;
-  text-decoration: none;
-}
-
-.section2__element a:visited {
-  color: black;
 }
 
 /* Footer */
@@ -251,7 +248,7 @@ footer a:hover {
 .check {
   background-color: #99E2D0;
   width: 0px;
-  height: 100px;
+  height: 70px;
   border-radius: 0px 10px 10px 0px;
   margin-right: 10px;
   box-shadow: 3px 3px 3px gainsboro;
@@ -261,18 +258,19 @@ footer a:hover {
 .fa-circle-check {
   color: white;
   position: relative;
-  left: 10px;
-  top: 10px;
+  left: 40px;
+  top: 25px;
   transition: transform 1s;
 }
 
 .text {
+  line-height: 2px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 3px 3px 3px gainsboro;
-  margin: 0px 10px 10px 10px;
+  margin: 0px auto 10px 10px;
   width: 100%;
-  height: 100px;
+  height: 70px;
   transition: width 1s;
 }
 .text:hover {
@@ -285,6 +283,12 @@ footer a:hover {
 }
 .text:hover + .check > .fa-circle-check {
   transform: rotate(360deg);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
 /* Transition sur les plats */
