@@ -377,6 +377,7 @@ footer a:hover {
   animation-duration: 4s;
 }
 
+/* Boutton "Commander" */
 #menu_button {
   margin-top: 30px;
   display: flex;
@@ -395,4 +396,42 @@ footer a:hover {
   padding-right: 20px;
 }
 
-/* Responsive design : taille d'écran mobile *//*# sourceMappingURL=styles.css.map */
+/* Responsive design : taille d'écran ordinateur */
+@media screen and (min-width: 993px) {
+  body {
+    background-color: pink;
+  }
+  #heading__explore {
+    height: 200px;
+  }
+  h2 {
+    padding-left: 80px;
+  }
+  .section1__element {
+    width: 40%;
+  }
+  #section2__alignement {
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section2__element {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .section2__element__label {
+    left: 200px;
+  }
+  #footer__position {
+    padding-left: 80px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    background-color: aqua;
+  }
+  #heading__explore {
+    height: 250px;
+  }
+}/*# sourceMappingURL=styles.css.map */
