@@ -39,8 +39,8 @@ footer{
   }
  
   @keyframes spin {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);} } 
+    0% {transform: rotate(0deg); opacity: 1;}
+    100% {transform: rotate(360deg); opacity: 0;} } 
   
   #spinner{
     border: 16px solid gainsboro;
@@ -49,8 +49,8 @@ footer{
     width: 50px;
     height: 50px;
     position: relative;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    top: 45%;
     animation-name: spin;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -344,6 +344,7 @@ footer a:hover{
     position: relative;
     right: 10px;
     top: 20px;
+    cursor: pointer;
 }
 
 .empty_heart2{
@@ -395,16 +396,14 @@ footer a:hover{
     margin-right: 10px;
     box-shadow: 3px 3px 3px gainsboro;
     transition: width 1s;
-    &:hover{
-        color: #9356DC;
-    }
+    overflow: hidden;
 }
 
 .fa-circle-check{
     color: white;
     position: relative;
-    left: 40px;
-    top: 25px;
+    left: 38px;
+    top: 23px;
     transition: transform 1s;
 }
 
