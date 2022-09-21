@@ -371,53 +371,129 @@ footer a:hover {
 }
 
 /* Transition sur les plats */
-.check {
-  background-color: #99E2D0;
-  width: 0px;
-  height: 70px;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+.plats__element {
+  line-height: 0px;
+  width: 95%;
+  background-color: white;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px gainsboro;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.plats__element:hover .check {
+  width: 20%;
+}
+.plats__element:hover .check > .fa-circle-check {
+  transform: rotate(360deg);
+}
+
+.check {
+  width: 0%;
+  background-color: #99E2D0;
+  border-radius: 0px 10px 10px 0px;
   transition: width 1s;
-  overflow: hidden;
 }
 
 .fa-circle-check {
   color: white;
   position: relative;
-  left: 38px;
-  top: 23px;
+  left: 40px;
+  top: 30px;
   transition: transform 1s;
 }
 
-.text {
+.plats__element2 {
   line-height: 0px;
-  padding-left: 15px;
+  width: 95%;
   background-color: white;
   border-radius: 10px;
   box-shadow: 3px 3px 3px gainsboro;
-  margin: 0px auto 10px 10px;
-  width: 100%;
-  height: 70px;
-  transition: width 1s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
-.text:hover {
-  width: 80%;
-  border-radius: 10px 0px 0px 10px;
-  margin-right: 0px;
-}
-.text:hover + .check {
+.plats__element2:hover .check {
   width: 20%;
 }
-.text:hover + .check > .fa-circle-check {
+.plats__element2:hover .check > .fa-circle-check {
   transform: rotate(360deg);
 }
 
+.plats__element3 {
+  line-height: 0px;
+  width: 95%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px gainsboro;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.plats__element3:hover .check {
+  width: 20%;
+}
+.plats__element3:hover .check > .fa-circle-check {
+  transform: rotate(360deg);
+}
+
+/*
+.check{
+    background-color: $tertiary-color;
+    width: 0px;
+    height: 70px;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+    box-shadow: 3px 3px 3px gainsboro;
+    transition: width 1s;
+    overflow: hidden;
+}
+
+.fa-circle-check{
+    color: white;
+    position: relative;
+    left: 38px;
+    top: 23px;
+    transition: transform 1s;
+}
+
+.text{
+    line-height: 0px;
+    padding-left: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px gainsboro;
+    margin: 0px auto 10px 10px;
+    width: 100%;
+    height: 70px;
+    transition: width 1s;
+    cursor: pointer;
+    &:hover{
+        width: 80%;
+        border-radius: 10px 0px 0px 10px;
+        margin-right: 0px;
+        & + .check{
+            width: 20%;
+            & > .fa-circle-check{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+*/
 .price {
   display: flex;
   justify-content: space-between;
-  padding-right: 20px;
 }
 .price :nth-child(1) {
   padding-left: 2px;

@@ -388,6 +388,85 @@ footer a:hover{
 
 /* Transition sur les plats */
 
+.plats__element{
+    line-height: 0px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    &:hover .check{
+        width: 20%;
+        & > .fa-circle-check{
+            transform: rotate(360deg);
+    }
+}
+}
+
+.check{
+    width: 0%;
+    background-color: $tertiary-color;
+    border-radius: 0px 10px 10px 0px;
+    transition: width 1s;
+}
+
+.fa-circle-check{
+    color: white;
+    position: relative;
+    left: 40px;
+    top: 30px;
+    transition: transform 1s;
+}
+
+
+.plats__element2{
+    line-height: 0px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    &:hover .check{
+        width: 20%;
+        & > .fa-circle-check{
+            transform: rotate(360deg);
+    }
+}
+}
+
+.plats__element3{
+    line-height: 0px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    &:hover .check{
+        width: 20%;
+        & > .fa-circle-check{
+            transform: rotate(360deg);
+    }
+}
+}
+
+
+
+/*
 .check{
     background-color: $tertiary-color;
     width: 0px;
@@ -431,12 +510,13 @@ footer a:hover{
     }
 }
 
+*/
+
 
 
 .price {
     display: flex;
     justify-content: space-between;
-    padding-right: 20px;
     & :nth-child(1){
         padding-left: 2px;
     }
