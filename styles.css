@@ -28,6 +28,7 @@ footer {
   width: 100%;
   height: 100%;
   position: fixed;
+  bottom: 5px;
   z-index: 100;
   background-color: #F6F6F6;
   animation-name: load;
@@ -223,7 +224,7 @@ a {
   color: black;
 }
 
-.section2__element h3, p {
+.section2__text {
   padding-left: 10px;
 }
 
@@ -286,7 +287,6 @@ footer a:hover {
 /* Page MENU En-tête */
 .menu {
   background-color: #F6F6F6;
-  padding-bottom: 30px;
 }
 
 .menu__image {
@@ -372,8 +372,8 @@ footer a:hover {
 
 /* Transition sur les plats */
 .plats__element {
-  line-height: 0px;
   width: 95%;
+  height: 65px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 3px 3px 3px gainsboro;
@@ -381,15 +381,23 @@ footer a:hover {
   margin-right: auto;
   margin-bottom: 10px;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
 }
 .plats__element:hover .check {
-  width: 20%;
+  width: 25%;
 }
-.plats__element:hover .check > .fa-circle-check {
-  display: block;
+.plats__element:hover .fa-circle-check {
   transform: rotate(360deg);
+}
+.plats__element:hover .price {
+  transform: translate(-5px, 0px);
+}
+
+.price {
+  padding-right: 10px;
+  position: relative;
+  top: 12px;
+  transition: transform 1s;
 }
 
 .check {
@@ -400,67 +408,32 @@ footer a:hover {
 }
 
 .fa-circle-check {
-  display: none;
   color: white;
   position: relative;
-  left: 40px;
-  top: 30px;
+  left: 30px;
+  top: 25px;
   transition: transform 1s;
 }
 
-.plats__element2 {
-  line-height: 0px;
-  width: 95%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px gainsboro;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.plats__element2:hover .check {
-  width: 20%;
-}
-.plats__element2:hover .check > .fa-circle-check {
-  transform: rotate(360deg);
-}
-
-.plats__element3 {
-  line-height: 0px;
-  width: 95%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px gainsboro;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.plats__element3:hover .check {
-  width: 20%;
-}
-.plats__element3:hover .check > .fa-circle-check {
-  transform: rotate(360deg);
+.right {
+  min-width: 0;
+  width: 100%;
 }
 
 .text {
+  margin: 0;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.price {
-  display: flex;
-  justify-content: space-between;
+.text_padding {
+  padding-top: 10px;
 }
-.price :nth-child(1) {
-  padding-left: 1px;
-}
-.price :nth-child(2) {
-  font-weight: bolder;
+
+.text_detail {
+  font-weight: normal;
 }
 
 /* Transition sur les plats */
@@ -494,27 +467,37 @@ footer a:hover {
     transform: translateY(0px);
   }
 }
-.plats__element {
+@keyframes element4 {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.plat--anim1 {
   display: flex;
   animation-name: element1;
   animation-duration: 4s;
 }
 
-.plats__element2 {
+.plat--anim2 {
   display: flex;
   animation-name: element2;
   animation-duration: 4s;
 }
 
-.plats__element3 {
+.plat--anim3 {
   display: flex;
   animation-name: element3;
   animation-duration: 4s;
 }
 
-.plats__element4 {
+.plat--anim4 {
   display: flex;
-  animation-name: element3;
+  animation-name: element4;
   animation-duration: 4s;
 }
 
@@ -522,6 +505,8 @@ footer a:hover {
 #menu_button {
   display: flex;
   justify-content: center;
+  position: relative;
+  bottom: 50px;
 }
 #menu_button button {
   font-weight: bold;
@@ -540,11 +525,13 @@ footer a:hover {
 /* Responsive design : taille d'écran ordinateur */
 @media screen and (min-width: 993px) {
   /* Page d'accueil */
-  body {
-    background-color: pink;
+  header, footer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   #heading__explore {
-    height: 200px;
+    height: 250px;
   }
   h2 {
     padding-left: 80px;
@@ -574,21 +561,18 @@ footer a:hover {
   }
   /* Page Menu */
   #menu__header {
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     background-color: #F2F2F2;
   }
   .menu {
-    width: 70%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  body {
-    background-color: aqua;
-  }
   #heading__explore {
     height: 250px;
   }
@@ -604,5 +588,4 @@ footer a:hover {
   .heart {
     left: 480px;
   }
-  /* Page Menu */
 }/*# sourceMappingURL=styles.css.map */

@@ -31,6 +31,7 @@ footer{
     width: 100%;
     height: 100%;
     position: fixed;
+    bottom: 5px;
     z-index: 100;
     background-color: $background-color;
     animation-name: load;
@@ -231,7 +232,7 @@ a{
     color: black;
 }
 
-.section2__element h3, p{
+.section2__text{
     padding-left: 10px;
 }
 
@@ -299,7 +300,6 @@ footer a:hover{
 
 .menu{
     background-color: $background-color;
-    padding-bottom: 30px;
 }
 
 .menu__image{
@@ -327,7 +327,6 @@ footer a:hover{
     border-radius: 50px 50px 0 0;
     position: relative;
     bottom: 70px;
-
 }
 
 .menu__head__element{
@@ -337,7 +336,6 @@ footer a:hover{
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-
 }
 
 .menu__heart{
@@ -389,8 +387,8 @@ footer a:hover{
 /* Transition sur les plats */
 
 .plats__element{
-    line-height: 0px;
     width: 95%;
+    height: 65px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px 3px 3px gainsboro;
@@ -398,15 +396,20 @@ footer a:hover{
     margin-right: auto;
     margin-bottom: 10px;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
+    overflow: hidden;
     &:hover .check{
-        width: 20%;
-        & > .fa-circle-check{
-            display: block;
-            transform: rotate(360deg);
-    }
+        width: 25%;}
+    &:hover .fa-circle-check{
+        transform: rotate(360deg);}
+    &:hover .price{
+        transform: translate(-5px, 0px);}
 }
+
+.price{
+    padding-right: 10px;
+    position: relative;
+    top: 12px;
+    transition: transform 1s;
 }
 
 .check{
@@ -417,68 +420,32 @@ footer a:hover{
 }
 
 .fa-circle-check{
-    display: none;
     color: white;
     position: relative;
-    left: 40px;
-    top: 30px;
+    left: 30px;
+    top: 25px;
     transition: transform 1s;
 }
 
-
-.plats__element2{
-    line-height: 0px;
-    width: 95%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px gainsboro;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    &:hover .check{
-        width: 20%;
-        & > .fa-circle-check{
-            transform: rotate(360deg);
-    }
-}
-}
-
-.plats__element3{
-    line-height: 0px;
-    width: 95%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px gainsboro;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    &:hover .check{
-        width: 20%;
-        & > .fa-circle-check{
-            transform: rotate(360deg);
-    }
-}
+.right{
+    min-width: 0;
+    width: 100%;
 }
 
 .text{
+    margin: 0;
     padding-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.price{
-    display: flex;
-    justify-content: space-between;
-    & :nth-child(1){
-        padding-left: 1px;
-    }
-    & :nth-child(2){
-        font-weight: bolder;
-    }
+.text_padding{
+    padding-top: 10px;
+}
+
+.text_detail{
+    font-weight: normal;
 }
 
 
@@ -499,27 +466,32 @@ footer a:hover{
     75% {opacity: 1; transform: translateY(0px);}
 }
 
-.plats__element{
+@keyframes element4{
+    0% {opacity: 0; transform: translateY(10px);}
+    100% {opacity: 1; transform: translateY(0px);}
+}
+
+.plat--anim1{
     display: flex;
     animation-name: element1;
     animation-duration: 4s;
 }
 
-.plats__element2{
+.plat--anim2{
     display: flex;
     animation-name: element2;
     animation-duration: 4s;
 }
 
-.plats__element3{
+.plat--anim3{
     display: flex;
     animation-name: element3;
     animation-duration: 4s;
 }
 
-.plats__element4{
+.plat--anim4{
     display: flex;
-    animation-name: element3;
+    animation-name: element4;
     animation-duration: 4s;
 }
 
@@ -528,6 +500,8 @@ footer a:hover{
 #menu_button{
     display: flex;
     justify-content: center;
+    position: relative;
+    bottom: 50px;
     & button{
         font-weight: bold;
         color: white;
@@ -552,12 +526,14 @@ footer a:hover{
 
     /* Page d'accueil */
 
-    body{
-    background-color: pink;
+    header, footer{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #heading__explore{
-        height: 200px;
+        height: 250px;
     }
 
     h2{
@@ -588,22 +564,24 @@ footer a:hover{
     .heart{
         left: 180px;
     }
-    
+
     #footer__position{
         padding-left: 80px;
     }
 
+
+
     /* Page Menu */
 
     #menu__header{
-        width: 70%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         background-color: #F2F2F2;
     }
 
     .menu{
-        width: 70%;
+        width: 50%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -612,10 +590,6 @@ footer a:hover{
 
 @media screen and (min-width:769px) and (max-width:992px)
 {
-    body{
-        background-color: aqua;
-    }
-
     #heading__explore{
         height: 250px;
     }
@@ -636,8 +610,5 @@ footer a:hover{
         left: 480px;
     }
 
-
-
-   /* Page Menu */
     
 }
