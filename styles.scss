@@ -131,9 +131,11 @@ header{
     padding-right: 20px;
     margin-top: 10px;
     cursor: pointer;
+    &:hover{
+        background: linear-gradient(#ff79d9d0, #AA64FF);
+        box-shadow: 4px 4px 4px darkgray;
+    }
 }
-
-
 
 /* Section Fonctionnement */
 
@@ -527,6 +529,10 @@ footer a:hover{
         padding-left: 20px;
         padding-right: 20px;
         cursor: pointer;
+        &:hover{
+            background: linear-gradient(#ff79d9d0, #AA64FF);
+            box-shadow: 4px 4px 4px darkgray;
+        }
     }
 }
 
