@@ -391,7 +391,6 @@ footer a:hover {
   width: 25%;
 }
 .plats__element:hover .fa-circle-check {
-  display: visible;
   transform: rotate(360deg);
   transition: all 0.5s 0.2s;
 }
